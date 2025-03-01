@@ -25,11 +25,16 @@ A key challenge is that Earth coordinates (lat/lon) don't map directly to the sa
 
 Analyzes the structure and content of GOES NetCDF files and outputs a JSON representation.
 
+```bash
 python inspect_netcdf.py <path_to_netcdf_file> [--output_dir OUTPUT_DIR]
+```
 
-Arguments:
-path_to_netcdf_file     Path to the NetCDF file to analyze
---output_dir            Directory to save the JSON output (default: processed_results/file_inspection)
+#### Arguments
+
+| Argument              | Description                                                   |
+|-----------------------|---------------------------------------------------------------|
+| `path_to_netcdf_file` | Path to the NetCDF file to visualize.                         |
+| `--output_dir`        | *(Optional)* Directory to save the visualizations. Default: current directory. |
 
 This tool is useful for understanding the variables, dimensions, and metadata contained in the NetCDF files.
 
@@ -37,11 +42,17 @@ This tool is useful for understanding the variables, dimensions, and metadata co
 
 Visualizes the full radiance grid from a GOES NetCDF file with multiple visualization approaches.
 
+```bash
 python inspect_rad_grid.py <path_to_netcdf_file> [--output_dir OUTPUT_DIR]
+```
 
-Arguments:
-path_to_netcdf_file     Path to the NetCDF file to visualize
---output_dir            Directory to save the visualizations (default: current directory)
+#### Arguments
+
+| Argument              | Description                                                   |
+|-----------------------|---------------------------------------------------------------|
+| `path_to_netcdf_file` | Path to the NetCDF file to visualize.                         |
+| `--output_dir`        | *(Optional)* Directory to save the visualizations. Default: current directory. |
+
 
 The script generates four visualizations:
 1. Linear scale visualization of the full radiance grid
